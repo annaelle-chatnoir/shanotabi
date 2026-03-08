@@ -1,198 +1,163 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - しゃのたび</title>
+    <title>法的文書 - しゃのたび</title>
     <style>
         :root {
-            --bg-color: #FDF9F4;
-            --card-bg: #FFFFFF;
-            --accent-color: #E67E22;
-            --text-color: #4A443F;
-            --secondary-text: #8E857E;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --primary-color: #5E8C9E;
+            --secondary-color: #3D405B;
+            --accent-color: #D16D5E;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333;
         }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
             margin: 0;
-            padding: 40px 20px;
+            padding: 0;
         }
-
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 40px auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
         }
-
-        .icon {
-            font-size: 48px;
-            margin-bottom: 10px;
+        .tab-button {
+            padding: 10px 20px;
+            border: none;
+            background: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #777;
+            transition: all 0.3s;
+            border-radius: 8px;
+        }
+        .tab-button.active {
+            color: var(--primary-color);
+            background: rgba(94, 140, 158, 0.1);
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
             display: block;
         }
-
-        h1 {
-            font-size: 28px;
-            margin: 0 0 10px 0;
-            color: var(--text-color);
+        h1 { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-top: 0; }
+        h2 { color: var(--secondary-color); margin-top: 30px; }
+        .important-box {
+            background-color: #fff9f9;
+            padding: 20px;
+            border-left: 5px solid var(--accent-color);
+            margin: 20px 0;
+            font-size: 0.95em;
         }
-
-        .last-updated {
-            font-size: 14px;
-            color: var(--secondary-text);
-        }
-
-        section {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 24px;
-            box-shadow: var(--shadow);
-        }
-
-        h2 {
-            font-size: 20px;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            color: var(--accent-color);
-        }
-
-        h2::before {
-            content: "";
-            display: inline-block;
-            width: 4px;
-            height: 20px;
-            background-color: var(--accent-color);
-            margin-right: 12px;
-            border-radius: 2px;
-        }
-
-        p {
-            margin: 10px 0;
-        }
-
-        ul {
-            padding-left: 20px;
-            margin: 10px 0;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
         .footer {
+            margin-top: 50px;
             text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: var(--secondary-text);
+            font-size: 0.85em;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        a { color: var(--primary-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .container { margin: 10px; padding: 20px; }
+            .tab-button { padding: 8px 12px; font-size: 14px; }
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <span class="icon">🛡️</span>
-            <h1>プライバシーポリシー</h1>
-            <p class="last-updated">最終更新日: 2026年2月23日</p>
-        </header>
 
-        <section>
-            <h2>1. はじめに</h2>
-            <p>「しゃのたび」（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に最大限努めます。本ポリシーでは、本アプリが取得・使用・保管するデータについて説明します。</p>
-        </section>
+<div class="container">
+    <div class="tabs">
+        <button class="tab-button active" onclick="showTab('privacy')">プライバシーポリシー</button>
+        <button class="tab-button" onclick="showTab('terms')">利用規約</button>
+    </div>
 
-        <section>
-            <h2>2. 取得するデータ</h2>
-            <p>本アプリは以下のデータを取得・保存します：</p>
-            <p><strong>■ ユーザーが入力した情報</strong></p>
-            <ul>
-                <li>ニックネーム、プロフィールアイコン色</li>
-                <li>旅行の計画情報（行き先、日程、スケジュール）</li>
-                <li>メモ・コメント</li>
-            </ul>
-            <p><strong>■ 位置情報</strong></p>
-            <ul>
-                <li>スケジュールに登録された場所の緯度・経度</li>
-                <li>地図表示時の「使用中のみ」の位置情報</li>
-                <li>※ バックグラウンドでの位置情報取得は行いません</li>
-            </ul>
-            <p><strong>■ iCloud データ</strong></p>
-            <ul>
-                <li>Apple ID に紐づくチーム共有情報（CloudKit 経由）</li>
-            </ul>
-        </section>
+    <!-- Privacy Policy Section -->
+    <div id="privacy" class="content-section active">
+        <h1>プライバシーポリシー</h1>
+        <p>最終更新日: 2026年3月8日</p>
+        <p>「しゃのたび」（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に最大限努めます。</p>
 
-        <section>
-            <h2>3. データの使用目的</h2>
-            <p>取得したデータは以下の目的のみに使用します：</p>
-            <ul>
-                <li>旅行計画の作成・管理・表示</li>
-                <li>チームメンバー間でのデータ共有</li>
-                <li>地図上でのスケジュール表示</li>
-                <li>アプリの機能改善</li>
-            </ul>
-            <p>※ 第三者への販売・提供は一切行いません</p>
-        </section>
+        <h2>1. 取得するデータと目的</h2>
+        <ul>
+            <li><strong>ユーザー入力情報:</strong> ニックネーム、旅行計画（目的地、日程、メモ）、チーム共有・チャット内のコメント。旅行管理および共有のために使用します。</li>
+            <li><strong>位置情報:</strong> 目的地の所在地および現在地情報。「アプリ使用中のみ」取得し、バックグラウンドでの追跡は行いません。</li>
+            <li><strong>購入情報:</strong> 課金ステータスの管理に使用します。</li>
+        </ul>
 
-        <section>
-            <h2>4. データの保管</h2>
-            <ul>
-                <li>データはお使いのデバイスおよび Apple の iCloud サーバーに保管されます</li>
-                <li>CloudKit を使用しており、Apple の堅牢なセキュリティインフラで保護されています</li>
-                <li>共有データは招待された Apple ID のユーザーのみがアクセスできます</li>
-                <li>開発者がユーザーの個人データに直接アクセスすることはありません</li>
-            </ul>
-        </section>
+        <h2>2. データの保管</h2>
+        <p>データは Google の提供する Firebase (Firestore) に保管され、業界標準のセキュリティ技術で保護されます。</p>
 
-        <section>
-            <h2>5. 位置情報について</h2>
-            <ul>
-                <li>位置情報は「アプリ使用中のみ」取得します</li>
-                <li>バックグラウンドでの位置追跡は行いません</li>
-                <li>リアルタイムの現在地共有機能はありません</li>
-                <li>位置情報の利用はいつでもiOSの設定からオフにできます</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>6. データの削除</h2>
-            <ul>
-                <li>アプリを削除すると、デバイス上のデータは完全に消去されます</li>
-                <li>iCloud 上のデータは、iCloud の設定から削除できます</li>
-                <li>チーム共有から退会すると、そのチームのデータへのアクセス権は即座に失われます</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>7. 広告について</h2>
-            <ul>
-                <li>本アプリは Google AdMob による広告を表示する場合があります</li>
-                <li>広告配信のため、広告IDが Google に送信される場合があります</li>
-                <li>iOS の設定で「パーソナライズ広告」をオフにすることで、関連性のない広告が表示されるようにすることができます</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>8. お問い合わせ</h2>
-            <p>本ポリシーに関するご質問やお問い合わせは、以下のフォームよりご連絡ください。</p>
-            <p><a href="https://forms.gle/AkjgRwLWDRj2ZfKY9" target="_blank">お問い合わせフォーム</a></p>
-        </section>
+        <h2>3. データの削除</h2>
+        <p>アプリ内からデータの削除やチーム脱退が可能です。アカウント全体の削除はフォームより申請してください。</p>
 
         <div class="footer">
-            &copy; 2026 しゃのたび 開発チーム
+            <p>お問い合わせ: <a href="https://forms.gle/AkjgRwLWDRj2ZfKY9" target="_blank">お問い合わせフォーム</a></p>
         </div>
     </div>
-</body>
 
+    <!-- Terms of Service Section -->
+    <div id="terms" class="content-section">
+        <h1>利用規約</h1>
+        <p>制定日: 2026年3月8日</p>
+        <p>本規約は、「しゃのたび」の利用条件を定めるものです。</p>
+
+        <div class="important-box">
+            <strong>免責事項（重要）:</strong><br>
+            本アプリは「現状有姿（そのままの状態）」で提供されます。本アプリの利用によって生じた損害（データ消失、旅行中のトラブル、端末の故障等）について、当チームは一切の責任を負いません。いかなる場合も、賠償額はユーザーが本アプリに支払った直近1ヶ月の金額を上限とします。
+        </div>
+
+        <h2>1. データの共有</h2>
+        <p>共有機能で招待したメンバーには、当該旅行のすべての情報が公開・編集可能になることを承諾したものとみなします。</p>
+
+        <h2>2. 禁止事項</h2>
+        <p>システムの解析、迷惑行為、法令に反する行為を禁止します。</p>
+
+        <h2>3. 準拠法</h2>
+        <p>日本法を準拠法とし、紛争が生じた場合は当チームの所在地を管轄する裁判所を専属的合意管轄とします。</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 しゃのたび開発チーム</p>
+    </div>
+</div>
+
+<script>
+    function showTab(tabId) {
+        // Hide all sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        // Remove active class from buttons
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        // Show selected section
+        document.getElementById(tabId).classList.add('active');
+        // Add active class to clicked button
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
 </html>
