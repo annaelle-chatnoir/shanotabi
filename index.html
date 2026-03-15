@@ -3,161 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>法的文書 - しゃのたび</title>
+    <title>しゃのたび | プライバシーポリシー・利用規約</title>
+    <meta name="description" content="しゃのたびのプライバシーポリシー、利用規約、特定商取引法に基づく表記。">
     <style>
         :root {
-            --primary-color: #5E8C9E;
-            --secondary-color: #3D405B;
-            --accent-color: #D16D5E;
-            --bg-color: #f4f7f6;
-            --card-bg: #ffffff;
-            --text-color: #333;
+            --bg: #f8f4ee;
+            --paper: #fffdf9;
+            --ink: #403730;
+            --muted: #7d7067;
+            --line: #e7ddd2;
+            --accent: #d96d20;
+            --accent-soft: #fff1e5;
+            --shadow: 0 12px 40px rgba(80, 56, 34, 0.08);
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
             margin: 0;
-            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, #fff8ef 0, transparent 28%),
+                linear-gradient(180deg, #f7efe5 0%, var(--bg) 100%);
+            line-height: 1.75;
         }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+
+        .wrap {
+            width: min(920px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 32px 0 64px;
         }
-        .tabs {
+
+        .hero {
+            background: rgba(255, 253, 249, 0.88);
+            border: 1px solid rgba(217, 109, 32, 0.12);
+            border-radius: 28px;
+            padding: 32px 24px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        h1 {
+            margin: 16px 0 12px;
+            font-size: clamp(32px, 6vw, 48px);
+            line-height: 1.12;
+        }
+
+        .hero p {
+            margin: 0;
+            color: var(--muted);
+            max-width: 58ch;
+        }
+
+        .meta {
+            margin-top: 18px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        nav {
             display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 22px 0 0;
         }
-        .tab-button {
-            padding: 10px 20px;
-            border: none;
-            background: none;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            color: #777;
-            transition: all 0.3s;
-            border-radius: 8px;
+
+        nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--ink);
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 10px 14px;
+            font-size: 14px;
         }
-        .tab-button.active {
-            color: var(--primary-color);
-            background: rgba(94, 140, 158, 0.1);
+
+        main {
+            display: grid;
+            gap: 22px;
+            margin-top: 24px;
         }
-        .content-section {
-            display: none;
+
+        .panel {
+            background: var(--paper);
+            border: 1px solid rgba(64, 55, 48, 0.08);
+            border-radius: 24px;
+            padding: 28px 22px;
+            box-shadow: var(--shadow);
         }
-        .content-section.active {
-            display: block;
+
+        .panel h2 {
+            margin: 0 0 18px;
+            font-size: 26px;
         }
-        h1 { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-top: 0; }
-        h2 { color: var(--secondary-color); margin-top: 30px; }
-        .important-box {
-            background-color: #fff9f9;
-            padding: 20px;
-            border-left: 5px solid var(--accent-color);
-            margin: 20px 0;
-            font-size: 0.95em;
+
+        .section {
+            padding-top: 18px;
+            margin-top: 18px;
+            border-top: 1px solid var(--line);
         }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        .footer {
-            margin-top: 50px;
+
+        .section:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: 0;
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: var(--accent);
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .contact {
+            display: inline-block;
+            margin-top: 8px;
+            text-decoration: none;
+            color: white;
+            background: var(--accent);
+            border-radius: 14px;
+            padding: 12px 16px;
+            font-weight: 700;
+        }
+
+        .note {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 28px;
             text-align: center;
-            font-size: 0.85em;
-            color: #888;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
+            color: var(--muted);
+            font-size: 14px;
         }
-        a { color: var(--primary-color); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        @media (max-width: 600px) {
-            .container { margin: 10px; padding: 20px; }
-            .tab-button { padding: 8px 12px; font-size: 14px; }
+
+        @media (max-width: 640px) {
+            .wrap {
+                width: min(100% - 20px, 920px);
+                padding-top: 20px;
+            }
+
+            .hero,
+            .panel {
+                border-radius: 20px;
+                padding: 22px 16px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="wrap">
+        <header class="hero">
+            <div class="eyebrow">しゃのたび 公式ページ</div>
+            <h1>プライバシーポリシー・利用規約</h1>
+            <p>本ページは、しゃのたびのプライバシーポリシー、利用規約、および特定商取引法に基づく表記の正式版です。アプリ内表示よりも本ページを優先してご確認ください。</p>
+            <div class="meta">最終更新日: 2025年2月14日</div>
+            <nav>
+                <a href="#privacy">プライバシーポリシー</a>
+                <a href="#terms">利用規約</a>
+                <a href="#commerce">特定商取引法に基づく表記</a>
+            </nav>
+        </header>
 
-<div class="container">
-    <div class="tabs">
-        <button class="tab-button active" onclick="showTab('privacy')">プライバシーポリシー</button>
-        <button class="tab-button" onclick="showTab('terms')">利用規約</button>
+        <main>
+            <section class="panel" id="privacy">
+                <h2>プライバシーポリシー</h2>
+
+                <div class="section">
+                    <h3>1. はじめに</h3>
+                    <p>「しゃのたび」（以下「本アプリ」）は、旅行計画の作成・共有機能を提供するアプリです。本プライバシーポリシーは、本アプリにおける利用者情報の取得、利用、保存、第三者提供その他の取扱いについて定めるものです。</p>
+                </div>
+
+                <div class="section">
+                    <h3>2. 取得する情報</h3>
+                    <p>本アプリは以下の情報を取得または保存します。</p>
+                    <p><strong>利用者が入力する情報</strong></p>
+                    <ul>
+                        <li>ニックネーム、プロフィール設定情報</li>
+                        <li>チーム名、旅行名、日程、スケジュール、メモ、コメント等の投稿内容</li>
+                        <li>地点名、住所、緯度・経度、関連URL等の場所情報</li>
+                    </ul>
+                    <p><strong>認証・識別に関する情報</strong></p>
+                    <ul>
+                        <li>Apple ID 連携または匿名ログインにより生成される認証情報</li>
+                        <li>Firebase Authentication 上のユーザー識別子</li>
+                    </ul>
+                    <p><strong>購入・利用状況に関する情報</strong></p>
+                    <ul>
+                        <li>App Store の課金状態、購入済み権利、購読状態</li>
+                    </ul>
+                    <p><strong>端末・通信に関する情報</strong></p>
+                    <ul>
+                        <li>App Check、不正利用防止、障害調査のために必要となる技術情報</li>
+                        <li>Firebase / Apple が提供する範囲で処理される接続情報</li>
+                    </ul>
+                    <p><strong>位置情報</strong></p>
+                    <ul>
+                        <li>利用者が予定や地図機能で扱う地点の位置情報</li>
+                        <li>地図上で現在地表示を利用する場合の「使用中のみ」の位置情報</li>
+                        <li>バックグラウンドでの継続的な位置追跡は行いません</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>3. 利用目的</h3>
+                    <ul>
+                        <li>本アプリのアカウント作成、本人確認、ログイン状態の維持</li>
+                        <li>旅行計画、チーム、スケジュール、コメント等の作成・保存・同期・共有</li>
+                        <li>地図検索、ルート表示、天気表示等の関連機能の提供</li>
+                        <li>購入済み機能の付与、購読状態の確認、復元処理</li>
+                        <li>不正利用防止、セキュリティ確保、障害対応、利用規約違反への対応</li>
+                        <li>お問い合わせへの回答、重要なお知らせの案内</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>4. 保存先と外部サービス</h3>
+                    <ul>
+                        <li>利用者データは、お使いの端末内および Google Firebase 等のクラウド基盤上に保存されます</li>
+                        <li>地図、経路、天気等の機能では Apple の MapKit / WeatherKit 等のサービスを利用します</li>
+                        <li>Apple ID 連携、App Store 決済、サブスクリプション管理では Apple の提供する仕組みを利用します</li>
+                        <li>当方は、運営・保守に必要な範囲で、基盤提供事業者に情報を取り扱わせることがあります</li>
+                        <li>チームや旅行に共有された情報は、招待または参加したメンバーが閲覧・編集できる場合があります</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>5. 位置情報について</h3>
+                    <ul>
+                        <li>現在地表示等の機能に必要な場合に限り、位置情報の利用を求めます</li>
+                        <li>位置情報はアプリ利用中に限って利用し、バックグラウンドでの継続追跡は行いません</li>
+                        <li>リアルタイムの現在地共有機能はありません</li>
+                        <li>予定や地図検索で入力した地点情報は、旅行計画の一部として保存されます</li>
+                        <li>位置情報の利用はいつでも iOS の設定から変更または停止できます</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>6. 削除と保持</h3>
+                    <p><strong>アカウント削除</strong></p>
+                    <ul>
+                        <li>利用者は、アプリ内の所定の手続によりアカウント削除を申請できます</li>
+                        <li>削除時には、認証情報、プロフィール情報、投稿コメントその他当方が削除可能な関連データを順次削除します</li>
+                    </ul>
+                    <p><strong>チーム退出</strong></p>
+                    <ul>
+                        <li>チームから退出した場合、そのチーム内データへのアクセス権を失います</li>
+                        <li>共同利用の性質上、他メンバーの継続利用に必要な旅行計画等は残る場合があります</li>
+                    </ul>
+                    <p><strong>保持期間</strong></p>
+                    <ul>
+                        <li>利用者データは、利用目的の達成に必要な期間または法令上必要な期間保持します</li>
+                        <li>障害対応、不正利用対策、法令対応のため、一部ログや技術情報を一定期間保持する場合があります</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>7. 安全対策と利用制限</h3>
+                    <ul>
+                        <li>コメント等の投稿内容は、不適切表現の検知、通報対応、トラブル防止のため確認対象となる場合があります</li>
+                        <li>不正利用、迷惑行為、規約違反が確認された場合、投稿削除、機能制限、アカウント停止等の措置を行うことがあります</li>
+                        <li>他ユーザーの表示制御や安全対策機能を提供する場合があります</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>8. 広告・トラッキングについて</h3>
+                    <ul>
+                        <li>本アプリは現在、広告の表示を行っていません</li>
+                        <li>IDFA（広告識別子）の取得は行っていません</li>
+                        <li>ユーザーの行動を追跡するトラッキングは一切行っていません</li>
+                        <li>将来、広告またはトラッキングを導入する場合は、本ポリシー等を更新し、必要な同意取得を行います</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>9. 第三者提供</h3>
+                    <p>当方は、法令に基づく場合を除き、個人情報を本アプリの提供に必要な範囲を超えて第三者に提供しません。ただし、Google Firebase、Apple の各種サービス等、機能提供に必要な外部事業者に対しては、必要な範囲で情報を送信または処理させることがあります。</p>
+                </div>
+
+                <div class="section">
+                    <h3>10. 利用者の権利</h3>
+                    <p>利用者は、法令の定めに従い、自己の個人情報について開示、訂正、削除、利用停止等を求めることができます。ご希望の場合は、お問い合わせ窓口までご連絡ください。本人確認その他必要な手続をご案内します。</p>
+                </div>
+
+                <div class="section">
+                    <h3>11. お問い合わせ</h3>
+                    <p>本ポリシー、個人情報の取扱い、開示等のご請求に関するお問い合わせは、以下のフォームよりご連絡ください。</p>
+                    <a class="contact" href="https://forms.gle/AkjgRwLWDRj2ZfKY9" target="_blank" rel="noreferrer">お問い合わせフォームを開く</a>
+                </div>
+
+                <div class="section">
+                    <h3>12. 改定</h3>
+                    <p>当方は、法令改正、機能変更、運用上の必要に応じて本ポリシーを改定することがあります。重要な変更がある場合は、アプリ内表示その他適切な方法でお知らせします。</p>
+                </div>
+            </section>
+
+            <section class="panel" id="terms">
+                <h2>利用規約</h2>
+
+                <div class="section">
+                    <h3>1. 適用</h3>
+                    <p>本利用規約（以下「本規約」）は、「しゃのたび」（以下「本アプリ」）の利用条件を定めるものです。利用者は、本アプリを利用することにより、本規約に同意したものとみなされます。</p>
+                </div>
+
+                <div class="section">
+                    <h3>2. 利用条件</h3>
+                    <p>本アプリは、旅行計画の作成および共有を目的として提供されます。利用者は、法令、本規約、App Store の利用条件および公序良俗に従って本アプリを利用するものとします。</p>
+                </div>
+
+                <div class="section">
+                    <h3>3. アカウント管理</h3>
+                    <p>利用者は、Apple ID 連携または匿名ログイン等により本アプリを利用できます。利用者は、自己の端末、認証状態、共有リンクその他の利用環境を自ら管理する責任を負います。</p>
+                </div>
+
+                <div class="section">
+                    <h3>4. 禁止事項</h3>
+                    <p>利用者は、法令違反、公序良俗違反、他者への嫌がらせ、権利侵害、不正アクセス、虚偽情報の登録、共有リンクの不正利用、運営妨害、本アプリの不具合や脆弱性の不正利用、その他当方が不適切と判断する行為をしてはなりません。</p>
+                </div>
+
+                <div class="section">
+                    <h3>5. 投稿内容と権利</h3>
+                    <p>利用者が投稿または保存した文章、画像、場所情報その他のコンテンツに関する権利は、当該利用者または正当な権利者に帰属します。ただし、利用者は、本アプリの提供、共有、表示、保守、安全対策に必要な範囲で当方が当該コンテンツを利用することを許諾するものとします。チーム共有機能を利用した場合、共有先メンバーによる閲覧・編集に同意したものとみなします。</p>
+                </div>
+
+                <div class="section">
+                    <h3>6. 課金・サブスクリプション</h3>
+                    <p>有料機能、サブスクリプション、チップ等の購入は Apple の App Store 決済を通じて行われます。料金、課金時期、自動更新、解約、返金その他の条件は Apple が定める条件に従います。サブスクリプションは解約されるまで自動更新され、管理や解約は App Store のアカウント設定から行います。</p>
+                </div>
+
+                <div class="section">
+                    <h3>7. サービス変更・停止</h3>
+                    <p>当方は、保守、障害対応、仕様変更、法令対応その他の理由により、本アプリの全部または一部を変更、追加、中断または終了することがあります。</p>
+                </div>
+
+                <div class="section">
+                    <h3>8. 利用停止等</h3>
+                    <p>利用者が本規約に違反した場合または当方が必要と判断した場合、当方は、事前通知なく、投稿の削除、共有停止、アカウント利用制限その他必要な措置を行うことがあります。</p>
+                </div>
+
+                <div class="section">
+                    <h3>9. 免責</h3>
+                    <p>本アプリは現状有姿で提供されます。当方は、継続提供、完全性、正確性、特定目的適合性、エラーの不存在を保証しません。通信環境、外部サービス、端末状態、データ消失、共有相手による編集その他利用者または第三者に生じた損害について、当方に故意または重過失がある場合を除き、責任を負いません。</p>
+                </div>
+
+                <div class="section">
+                    <h3>10. 規約変更</h3>
+                    <p>当方は、必要に応じて本規約を変更できます。変更後の規約は、本ページまたはアプリ内表示その他適切な方法で周知した時点から効力を生じます。</p>
+                </div>
+
+                <div class="section">
+                    <h3>11. 準拠法・裁判管轄</h3>
+                    <p>本規約は日本法に準拠します。本アプリに関して当方と利用者との間で紛争が生じた場合、当方の主たる事業所所在地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</p>
+                </div>
+            </section>
+
+            <section class="panel" id="commerce">
+                <h2>特定商取引法に基づく表記</h2>
+
+                <div class="section">
+                    <h3>販売業者</h3>
+                    <p>しゃのたび運営</p>
+                </div>
+
+                <div class="section">
+                    <h3>運営責任者</h3>
+                    <p>氏名はご請求をいただいた場合、遅滞なく開示します。</p>
+                </div>
+
+                <div class="section">
+                    <h3>所在地</h3>
+                    <p>住所はご請求をいただいた場合、遅滞なく開示します。</p>
+                </div>
+
+                <div class="section">
+                    <h3>連絡先</h3>
+                    <p>下記お問い合わせフォームよりご連絡ください。</p>
+                    <a class="contact" href="https://forms.gle/AkjgRwLWDRj2ZfKY9" target="_blank" rel="noreferrer">お問い合わせフォームを開く</a>
+                </div>
+
+                <div class="section">
+                    <h3>販売価格</h3>
+                    <p>アプリ内購入画面に表示される価格（税込）</p>
+                </div>
+
+                <div class="section">
+                    <h3>商品代金以外の必要料金</h3>
+                    <p>インターネット接続料金および通信料金（詳細は通信契約先にご確認ください）。</p>
+                </div>
+
+                <div class="section">
+                    <h3>お支払い方法</h3>
+                    <p>Apple Inc. の提供する支払い手段（App Store 決済）</p>
+                </div>
+
+                <div class="section">
+                    <h3>代金の支払時期</h3>
+                    <p>購入確認時に Apple ID アカウントに課金されます。</p>
+                </div>
+
+                <div class="section">
+                    <h3>商品の引渡時期</h3>
+                    <p>決済完了後、直ちにご利用いただけます。</p>
+                </div>
+
+                <div class="section">
+                    <h3>返品・キャンセル</h3>
+                    <p>デジタルコンテンツの性質上、当方による返品・キャンセル対応は原則として行っていません。返金の可否は App Store の定めに従います。</p>
+                </div>
+
+                <p class="note">公開前に、運営者名・所在地・責任者表示は実際の開示方針に合わせて最終確認してください。</p>
+            </section>
+        </main>
+
+        <footer>
+            &copy; 2025 しゃのたび
+        </footer>
     </div>
-
-    <!-- Privacy Policy Section -->
-    <div id="privacy" class="content-section active">
-        <h1>プライバシーポリシー</h1>
-        <p>最終更新日: 2026年3月8日</p>
-        <p>「しゃのたび」（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に最大限努めます。</p>
-
-        <h2>1. 取得するデータと目的</h2>
-        <ul>
-            <li><strong>ユーザー入力情報:</strong> ニックネーム、旅行計画（目的地、日程、メモ）、チーム共有・チャット内のコメント。旅行管理および共有のために使用します。</li>
-            <li><strong>位置情報:</strong> 目的地の所在地および現在地情報。「アプリ使用中のみ」取得し、バックグラウンドでの追跡は行いません。</li>
-            <li><strong>購入情報:</strong> 課金ステータスの管理に使用します。</li>
-        </ul>
-
-        <h2>2. データの保管</h2>
-        <p>データは Google の提供する Firebase (Firestore) に保管され、業界標準のセキュリティ技術で保護されます。</p>
-
-        <h2>3. データの削除</h2>
-        <p>アプリ内からデータの削除やチーム脱退が可能です。</p>
-
-        <div class="footer">
-            <p>お問い合わせ: <a href="https://forms.gle/AkjgRwLWDRj2ZfKY9" target="_blank">お問い合わせフォーム</a></p>
-        </div>
-    </div>
-
-    <!-- Terms of Service Section -->
-    <div id="terms" class="content-section">
-        <h1>利用規約</h1>
-        <p>制定日: 2026年3月8日</p>
-        <p>本規約は、「しゃのたび」の利用条件を定めるものです。</p>
-
-        <div class="important-box">
-            <strong>免責事項（重要）:</strong><br>
-            本アプリは「現状有姿（そのままの状態）」で提供されます。本アプリの利用によって生じた損害（データ消失、旅行中のトラブル、端末の故障等）について、当チームは一切の責任を負いません。いかなる場合も、賠償額はユーザーが本アプリに支払った直近1ヶ月の金額を上限とします。
-        </div>
-
-        <h2>1. データの共有</h2>
-        <p>共有機能で招待したメンバーには、当該旅行のすべての情報が公開・編集可能になることを承諾したものとみなします。</p>
-
-        <h2>2. 禁止事項</h2>
-        <p>システムの解析、迷惑行為、法令に反する行為を禁止します。</p>
-
-        <h2>3. 準拠法</h2>
-        <p>日本法を準拠法とし、紛争が生じた場合は当チームの所在地を管轄する裁判所を専属的合意管轄とします。</p>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2026 しゃのたび開発チーム</p>
-    </div>
-</div>
-
-<script>
-    function showTab(tabId) {
-        // Hide all sections
-        document.querySelectorAll('.content-section').forEach(section => {
-            section.classList.remove('active');
-        });
-        // Remove active class from buttons
-        document.querySelectorAll('.tab-button').forEach(button => {
-            button.classList.remove('active');
-        });
-        // Show selected section
-        document.getElementById(tabId).classList.add('active');
-        // Add active class to clicked button
-        event.currentTarget.classList.add('active');
-    }
-</script>
-
 </body>
 </html>
